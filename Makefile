@@ -14,8 +14,8 @@ DB_PASSWORD ?= secret
 DB_NAME ?= simple_bank
 
 migrateup:
-	# migrate -path db/migration -database "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable" -verbose up
-	migrate -path db/migration -database "postgresql://root:0WxHvaq506DMf5nLD5X0@simple-bank.cryy2ccg430o.us-west-2.rds.amazonaws.com:5432/simple_bank" -verbose up
+	migrate -path db/migration -database "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable" -verbose up
+	# migrate -path db/migration -database "postgresql://root:0WxHvaq506DMf5nLD5X0@simple-bank.cryy2ccg430o.us-west-2.rds.amazonaws.com:5432/simple_bank" -verbose up
 
 migrateup1:
 	migrate -path db/migration -database "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable" -verbose up 1
